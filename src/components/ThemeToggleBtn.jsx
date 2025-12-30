@@ -1,0 +1,18 @@
+import React from 'react'
+import assets from '../assets/assets'
+
+const ThemeToggleBtn = ({theme, setTheme}) => {
+  return (
+    <div>
+        <button>
+            {theme === "dark" ? (
+                <img onClick={()=> setTheme('light')} src={assets.sun_icon} alt="light-theme-icon" className='size-8.5 p-1.5 border border-gray-500 rounded-full'/>
+            ) : (
+                <img onClick={()=> setTheme('dark')} src={assets.moon_icon} alt="dark-theme-icon" className='size-8.5 p-1.5 border border-gray-500 rounded-full'/>
+            )}
+        </button>
+    </div>
+  )
+}
+
+export default ThemeToggleBtn
